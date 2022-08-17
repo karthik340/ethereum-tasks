@@ -40,11 +40,11 @@ So get Url and Key to interact with the infura node. we need wss as we will be u
 ### Eth Client
 
 Use ethclient to connect to Infura Node.\
-Use SubscribeNewHead function on client connection and pass header channel to it.\ 
+Use SubscribeNewHead function on client connection and pass header channel to it.
 
 ### Header Comparator
 
 channels are used for asynchronous communication.\
 select helps us to wait on multiple channels.\
 So we will wait for infinite time untill error happens in connection.\
-When a header is received we compare its number with previous one. If both are equal and hash for blocks differs then fork has happened and infura validator needs to update its chain with new block.\
+When a header is received we compare its number with previous one. If both are equal and hash for blocks differs then fork has happened and infura validator needs to update its chain with new block.
