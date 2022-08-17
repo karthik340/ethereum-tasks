@@ -42,12 +42,22 @@ In hex form each charater occupies 4 bits , it needs to be read as string from c
 ### Decoder
 Decoder receives the input.\
 In order to make comparisions of first byte , we need our input to be in form of byte array . 
+```go
+func findSolution(inputString string) string {
+
+}
+```
 
 ### Recursive function 
 Recursive function traverses byte array.\
 This function traverses the byte array untill it is completed . It uses Type Identifier to identify type of data like string or list or character , offset tells starting index of data and length tells the length of data from offset.
 
 Base case to stop this function is when length of input is zero . After parsing the respective type data it calls itself. 
+```go
+func extractStringsAndList(input []byte) string {
+
+}
+```
 
 ### Type Identifier
 This function returns offset, length, type of data . return an error if input is malformed . \
@@ -57,8 +67,25 @@ If first byte is
 * 0xb8 - 0xbf -> string , length of data follows type
 * 0xc0 - 0xf7 -> list length of data calculated as (byte-0xc0)
 * 0xf8 - 0xff -> list , length of data follows type
+```go
+func identifyType(input []byte) (offset uint64, length uint64, Type uint64, err error) {
+
+}
+```
 
 ### Helper Functions
 
 extractIntFromByteArray returns integer , given byte array and start of data and length of data.\
 extractStringFromByteArray returns string , given byte array and start of data and length of data.  
+```go
+func extractIntFromByteArray(input []byte, start, length uint64) (len uint64) {
+	slice := input[start:(start + length)]
+	strLen := big.NewInt(0).SetBytes(slice).Uint64()
+
+	return strLen
+}
+func extractStringFromByteArray(input []byte, start, length uint64) (res string) {
+	result := string(input)[start:(start + length)]
+	return result
+}
+```
