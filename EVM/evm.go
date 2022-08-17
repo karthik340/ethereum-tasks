@@ -34,16 +34,6 @@ const (
 
 // 	return strLen
 // }
-func extractHexFromByteArray(input []byte, start, length uint64) uint256.Int {
-	slice := input[start:(start + length)]
-	sliceString := hex.EncodeToString(slice)
-	sliceString = "0x" + sliceString
-	result, err := uint256.FromHex(sliceString)
-	if err != nil {
-		panic(err)
-	}
-	return *result
-}
 
 func calcMemSize64WithUint(off *uint256.Int, length64 uint64) (uint64, bool) {
 	// if length is zero, memsize is always zero, regardless of offset

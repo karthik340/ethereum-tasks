@@ -30,7 +30,7 @@ e5922034342e38313538393735343033373334319132302e3435343733343334343535353435
 * `Decoder`: converts hex string to byte array. 
 * `Recursive Function`: Recursion needed as there can be strings or list inside a list any no.of times.
 * `Type Identifier`: identifies the type(List or string or character ) based on the first byte.
-* `Helper Functions`: used to parse length or string from byte array.
+* `Helper Functions`: used to parse integer or string from byte array.
 
 Communication between above entities are shown in below diagram .
 
