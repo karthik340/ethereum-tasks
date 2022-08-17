@@ -4,10 +4,10 @@
 
 In the year 2092, as humanity is slowly going extinct, you are part of civilization’s last
 ditch effort to preserve the human race. Governments have employed you, as well as
-several other developers on a voyage mission into deep space.\
+several other developers on a voyage mission into deep space.
 
 When passing Neptune, the computer aboard your space ship malfunctions, leaving
-your crew stranded.\
+your crew stranded.
 
 The computer is an Ethereum Virtual Machine (EVM).\
 Being the only blockchain developer on board, your task is to build a small, but
@@ -20,7 +20,7 @@ MSTORE / MSTORE8                -  Stores a value in memory,with the correspondi
 ADD                             -  Adds the last 2 values on the stack  -  3\
 MUL                             -  Multiplies the last 2 values on the stack  - 5\
 SDIV                            -  Signed division of the last 2 values on the stack  -  5\
-EXP                             -  Exponentiation of the last 2 values on the stack  -  50*\
+EXP                             -  Exponentiation of the last 2 values on the stack  -  50*
 
 
 You will find examples that use these instructions on the following page. Each
@@ -29,7 +29,7 @@ the keccak256 hash of the memory after execution.\
 The notes section contains the corresponding opcodes in Ethereum.
 
 EXAMPLE #1:\
-BYTECODE : 60016020526002606452600361ff0052600362ffffff526005601053\ 
+BYTECODE : 60016020526002606452600361ff0052600362ffffff526005601053 \ 
 KECCAK256 : ab2744998886b708acadc0a32428d0aa1953e83924383d21c6de5dac852ccbcc \
 GAS CONSUMED : 538445872 
 
@@ -50,7 +50,7 @@ ffffffffffffffffffffffffffffffffffffffffff007fffffffffffffffffffffffffffffffffff
 fffffffffffffffffffffffff000a6020527fffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffff0a604052\
-KECCAK256 : afe1e714d2cd3ed5b0fa0a04ee95cd564b955ab8661c5665588758b48b66e263\ 
+KECCAK256 : afe1e714d2cd3ed5b0fa0a04ee95cd564b955ab8661c5665588758b48b66e263 \ 
 GAS CONSUMED : 4875 
 
 The EXP and MSTORE instructions have dynamic pricing:\
@@ -64,14 +64,14 @@ For the MSTORE:
 2.Figure out how many words (1 word == 256 bits) there are in the new memory\
 3.Use this formula for the newCost = 3*w+w*w/512\
 4. cost = newCost - the last cost you paid for the memory expansion (lastCost)\
-5. lastCost = cost (you store this somewhere for future memory expansions)\
+5. lastCost = cost (you store this somewhere for future memory expansions)
 * This is how much gas your operation should consume
-Opcode usage example:\
-Firstly find the row, then the column.\
-- STOP       0x00   R: 0, C: 0\
-- PUSH1 0x01 0x6001 R: 6, C: 0\
-- SHA3       0x20   R: 2, C: 0\
-- MSTORE     0x52   R: 5, C: 2\
+Opcode usage example:
+Firstly find the row, then the column.
+- STOP       0x00   R: 0, C: 0
+- PUSH1 0x01 0x6001 R: 6, C: 0
+- SHA3       0x20   R: 2, C: 0
+- MSTORE     0x52   R: 5, C: 2
 - ADD        0x01   R: 0, C: 1
 
 ## Solution
