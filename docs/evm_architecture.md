@@ -15,17 +15,13 @@ working EVM, capable of reading and executing a small set of instructions
 
 INSTRUCTION                       DESCRIPTION                     GAS
 
-PUSH1 / PUSH2 / PUSH3 / PUSH32    Pushes a value to the stack      3\
-MSTORE / MSTORE8                  Stores a value in memory,\
-                                  with the corresponding offset    3*\
-ADD                               Adds the last 2 values on the    3\
-                                  stack \
-MUL                               Multiplies the last 2 values on  5\
-                                  the stack \
-SDIV                              Signed division of the last 2    5\
-                                  values on the stack \
-EXP                               Exponentiation of the last 2     50*\
-                                  values on the stack
+PUSH1 / PUSH2 / PUSH3 / PUSH32  -  Pushes a value to the stack    -  3\
+MSTORE / MSTORE8                -  Stores a value in memory,with the corresponding offset  -  3*\
+ADD                             -  Adds the last 2 values on the stack  -  3\
+MUL                             -  Multiplies the last 2 values on the stack  - 5\
+SDIV                            -  Signed division of the last 2 values on the stack  -  5\
+EXP                             -  Exponentiation of the last 2 values on the stack  -  50*\
+
 
 You will find examples that use these instructions on the following page. Each
 example is provided with the instruction bytecode, estimated gas usage, as well as
