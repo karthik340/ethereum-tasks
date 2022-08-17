@@ -20,8 +20,8 @@ present in the messages.\
 Intercepted messages\
 #1:
 ed90416e616e746861204b726973686e616e8d526168756c204c656e6b616c618d47616e65736820507261736164\
-#2:\
-e5922034342e38313538393735343033373334319132302e3435343733343334343535353435\
+#2:
+e5922034342e38313538393735343033373334319132302e3435343733343334343535353435
 
 
 ## Solution
@@ -45,13 +45,13 @@ In order to make comparisions of first byte , we need our input to be in form of
 
 ### Recursive function 
 Recursive function traverses byte array.\
-This function traverses the byte array untill it is completed . It uses Type Identifier to identify type of data like string or list or character , offset tells starting index of data and length tells the length of data from offset.\
+This function traverses the byte array untill it is completed . It uses Type Identifier to identify type of data like string or list or character , offset tells starting index of data and length tells the length of data from offset.
 
-Base case to stop this function is when length of input is zero . After parsing the respective type data it calls itself. \
+Base case to stop this function is when length of input is zero . After parsing the respective type data it calls itself. 
 
 ### Type Identifier
 This function returns offset, length, type of data . return an error if input is malformed . \
-If first byte is\
+If first byte is
 * 0x00 - 0x7f -> character 
 * 0x80 - 0xb7 -> string , length of data calculated as (byte-0xb7)
 * 0xb8 - 0xbf -> string , length of data follows type
