@@ -5,12 +5,16 @@
 In the year 2092, as humanity is slowly going extinct, you are part of civilization’s last
 ditch effort to preserve the human race. Governments have employed you, as well as
 several other developers on a voyage mission into deep space.\
+
 When passing Neptune, the computer aboard your space ship malfunctions, leaving
 your crew stranded.\
+
 The computer is an Ethereum Virtual Machine (EVM).\
 Being the only blockchain developer on board, your task is to build a small, but
-working EVM, capable of reading and executing a small set of instructions\
-INSTRUCTION                       DESCRIPTION                     GAS\
+working EVM, capable of reading and executing a small set of instructions
+
+INSTRUCTION                       DESCRIPTION                     GAS
+
 PUSH1 / PUSH2 / PUSH3 / PUSH32    Pushes a value to the stack      3\
 MSTORE / MSTORE8                  Stores a value in memory,\
                                   with the corresponding offset    3*\
@@ -28,12 +32,12 @@ example is provided with the instruction bytecode, estimated gas usage, as well 
 the keccak256 hash of the memory after execution.\
 The notes section contains the corresponding opcodes in Ethereum.
 
-EXAMPLE #1:
+EXAMPLE #1:\
 BYTECODE : 60016020526002606452600361ff0052600362ffffff526005601053\ 
 KECCAK256 : ab2744998886b708acadc0a32428d0aa1953e83924383d21c6de5dac852ccbcc \
 GAS CONSUMED : 538445872 
 
-EXAMPLE #2:
+EXAMPLE #2:\
 BYTECODE : 7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7ffffffffffffffffff\
 fffffffffffffffffffffffffffffffffffffffffffff00016000527fffffffffffffffffffffffff\
 ffffffffffffffffffffffffffffffffffffff007ffffffffffffffffffffffffffffffffffffffffffff\
@@ -43,7 +47,7 @@ fff05604052\
 KECCAK256 : b9a07dba38aa24923a611fced9d2eede3bfbfa281e5e498d60f4bd99e5ce6a15 \
 GAS CONSUMED : 58 
 
-EXAMPLE #3:
+EXAMPLE #3:\
 BYTECODE : 7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7fffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffff000a6000527fffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffff007ffffffffffffffffffffffffffffffffffffff
