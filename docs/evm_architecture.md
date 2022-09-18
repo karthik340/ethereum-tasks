@@ -78,9 +78,9 @@ Firstly find the row, then the column.
 
 * `Input`: given as a string in hex form. 
 * `Decoder`: converts hex string to byte array. 
-* `Memory`: Recursion needed as there can be strings or list inside a list any no.of times.
-* `Stack`: identifies the type(List or string or character ) based on the first byte.
-* `Instructions Executer`: used to parse length or string from byte array.
+* `Memory`: Memory used when Mstore or Mstore8 operations used.
+* `Stack`: used for PUSH operations.
+* `Instructions Executer`: executes instruction based on the order and type of operation.
 * `Helper Functions`: used to parse length or string from byte array.
 
 
