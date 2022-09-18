@@ -81,7 +81,7 @@ Firstly find the row, then the column.
 * `Memory`: Memory used when Mstore or Mstore8 operations used.
 * `Stack`: used for PUSH operations.
 * `Instructions Executer`: executes instruction based on the order and type of operation.
-* `Helper Functions`: used to parse length or string from byte array.
+* `Helper Functions`: used for common functions.
 
 
 Communication between above entities are shown in below diagram .
